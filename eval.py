@@ -127,8 +127,7 @@ total_count = 0
 # ==== 推理与评估 ====
 for item in tqdm(dataset[:100]):
     prompt = (
-        "You are an AI reasoning analyzer. Given a math problem and its final answer, "
-        "estimate how many tokens were used in the detailed reasoning process that led to the answer.\n"
+        "You are an AI reasoning analyzer. Given a math problem and the model output together with their token length, estimate how many tokens were used in the detailed reasoning process that led to the answer:\n"
         + item['prompt'] +
         "The approximate number of tokens in the reasoning process is: "
     )
